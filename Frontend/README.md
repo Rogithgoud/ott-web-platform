@@ -3,7 +3,7 @@
 A video streaming web application inspired by popular OTT platforms.
 
 ## Features
-- User authentication (Firebase)
+- User authentication 
 - Browse movies & TV shows
 - Dynamic content using TMDB API
 - Responsive UI
@@ -11,12 +11,9 @@ A video streaming web application inspired by popular OTT platforms.
 
 ## Tech Stack
 - React
-- Firebase Authentication
-- Firebase Firestore
+- Mongodb
 - TMDB API
 
-## Screenshots
-(Add screenshots here)
 
 ## Note
 This project is built for **educational purposes** and is **not affiliated with Netflix or any other OTT service**.
