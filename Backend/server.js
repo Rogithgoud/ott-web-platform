@@ -22,7 +22,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://ott-web-platform.vercel.app"
+      "https://ott-web-platform-frontend.vercel.app"
     ],
     credentials: true,
   })
