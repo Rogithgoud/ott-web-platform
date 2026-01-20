@@ -27,12 +27,6 @@ app.use(
     credentials: true,
   })
 );
- res.cookie("token", token, {
-  httpOnly: true,
-  secure: true,
-  sameSite: "none",
-});
-
 
 
 app.use("/api/v1/auth",authRoutes);
