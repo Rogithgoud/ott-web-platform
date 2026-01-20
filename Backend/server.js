@@ -1,5 +1,7 @@
 import express from 'express';
 import cookieParser from 'cookie-parser';
+import cors from "cors";
+
 
 import authRoutes from "./routes/auth.route.js";
 import movieRoutes from "./routes/movie.route.js";
@@ -16,6 +18,22 @@ const PORT = ENV_VARS.PORT
 app.use(express.json());//will allow us to parse req.body
 app.use(cookieParser()); 
 
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://ott-web-platform.vercel.app"
+    ],
+    credentials: true,
+  })
+);
+ res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,
+  sameSite: "none",
+});
+
+
 
 app.use("/api/v1/auth",authRoutes);
 app.use("/api/v1/movie",protectRoute,movieRoutes);
@@ -24,8 +42,13 @@ app.use("/api/v1/search",protectRoute,searchRoutes);
 
 console.log("MONGO_URI: ", process.env.MONGO_URI);
 
-app.listen(PORT,()=>
-{console.log("server started at http://localhost:" +PORT);
+if (process.env.NODE_ENV !== "production") {
+  app.listen(PORT, () => {
+    console.log("Server running on port " + PORT);
     connectDB();
-});
+  });
+}
+
+export default app;
+
 
