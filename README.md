@@ -1,68 +1,97 @@
 # 🎬 OTT Web Platform (MERN Stack)
 
-A full-stack video streaming web application inspired by popular OTT platforms, built using the MERN stack.  
-This project focuses on secure authentication, RESTful APIs, database integration, and dynamic content rendering.
+🚀 **Live Demo**
+- **Frontend:** https://ott-web-platform-frontend.vercel.app  
+- **Backend API:** https://ott-web-platform.vercel.app  
+
+A full-stack **OTT (Over-The-Top) video streaming web application** inspired by platforms like Netflix.  
+This project is built using the **MERN stack** and demonstrates secure authentication, protected routes, real-time API integration, and production-ready deployment.
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-- 🔐 User Authentication & Authorization  
-  - Secure signup, login, and logout  
-  - JWT-based authentication using HTTP-only cookies  
+### 🔐 Authentication & Security
+- User Signup, Login, Logout
+- JWT-based authentication
+- Secure **HttpOnly cookies**
+- Protected backend routes
 
-- 🎥 Browse Movies & TV Shows  
-  - Trending, popular, and categorized content  
+### 🎥 Movies & TV Shows
+- Trending movies & TV shows
+- Movie & TV details
+- Trailers and similar content
+- Category-based browsing
 
-- 🔍 Dynamic Content Rendering  
-  - Movie and TV show data fetched from the TMDB API  
+### 🔍 Search
+- Search movies, TV shows, and people
+- User-specific search history
+- Remove items from search history
 
-- 👤 Protected Routes  
-  - Auth-protected frontend and backend routes  
+### 🧠 State Management
+- Global state management using **Zustand**
+- Persistent authentication state
 
-- 📱 Responsive UI  
-  - Optimized for desktop and mobile devices  
+### 🌐 External API Integration
+- Real-time data from **TMDB API**
 
-- 🗄️ Database Integration  
-  - User and application data stored in MongoDB Atlas  
+### ☁️ Deployment
+- Backend deployed on **Vercel**
+- Frontend deployed on **Vercel**
+- MongoDB Atlas cloud database
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
 ### Frontend
-- React  
-- Vite    
-- Axios  
-- CSS / Tailwind CSS  
+- React (Vite)
+- Zustand
+- Axios
+- Tailwind CSS
+- React Hot Toast
 
 ### Backend
-- Node.js  
-- Express.js  
-- MongoDB Atlas  
-- Mongoose  
+- Node.js
+- Express.js
+- MongoDB & Mongoose
+- JWT Authentication
+- Cookie-based authentication
+- TMDB API
 
-### Authentication & APIs
-- JWT (HTTP-only Cookies)  
-- TMDB API  
+### Deployment & Tools
+- Vercel
+- MongoDB Atlas
+- Git & GitHub
 
 ---
 
 ## 📂 Project Structure
 
-```bash
-Netflix-clone/
+ott-web-platform/
 │
-├── frontend/        # React application
-│   ├── src/
-│   └── vite.config.js
+├── Backend/
+│ ├── controllers/
+│ ├── routes/
+│ ├── middleware/
+│ ├── models/
+│ ├── services/
+│ ├── utils/
+│ ├── config/
+│ └── server.js
 │
-├── backend/         # Node + Express API
-│   ├── routes/
-│   ├── controllers/
-│   ├── models/
-│   ├── middleware/
-│   ├── config/
-│   └── server.js
+├── Frontend/
+│ ├── src/
+│ │ ├── api/
+│ │ ├── store/
+│ │ ├── pages/
+│ │ ├── components/
+│ │ └── App.jsx
+│ └── main.jsx
 │
 └── README.md
+
+## Disclaimer
+* This project is built strictly for educational purposes.
+* It is not affiliated with Netflix or any other OTT platform.
+* All movie and TV data is sourced from the TMDB API.
