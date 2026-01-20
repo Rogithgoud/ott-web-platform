@@ -17,34 +17,13 @@ connectDB();
 app.use(express.json());
 app.use(cookieParser());
 
-app.use((req, res, next) => {
-  const allowedOrigins = [
-    "http://localhost:5173",
-    "https://ott-web-platform-frontend.vercel.app",
-  ];
+app.use(
+  cors({
+    origin: "https://ott-web-platform-frontend.vercel.app",
+    credentials: true,
+  })
+);
 
-  const origin = req.headers.origin;
-
-  if (allowedOrigins.includes(origin)) {
-    res.setHeader("Access-Control-Allow-Origin", origin);
-  }
-
-  res.setHeader("Access-Control-Allow-Credentials", "true");
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, PUT, DELETE, OPTIONS"
-  );
-
-  if (req.method === "OPTIONS") {
-    return res.sendStatus(200);
-  }
-
-  next();
-});
 
 
 app.use("/api/v1/auth", authRoutes);
