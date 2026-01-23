@@ -1,8 +1,8 @@
 # 🎬 OTT Web Platform (MERN Stack)
 
 🚀 **Live Demo**
-- **Frontend:** https://ott-web-platform-frontend.vercel.app  
-- **Backend API:** https://ott-web-platform.vercel.app  
+- https://ott-web-platform-frontend.vercel.app  
+ 
 
 A full-stack **OTT (Over-The-Top) video streaming web application** inspired by platforms like Netflix.  
 This project is built using the **MERN stack** and demonstrates secure authentication, protected routes, real-time API integration, and production-ready deployment.
